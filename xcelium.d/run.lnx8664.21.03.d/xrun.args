@@ -1,0 +1,12 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-mess
+-access
++rwc
+-sv
+counter_if.sv
+counter.sv
+tb_top.sv
+test.sv

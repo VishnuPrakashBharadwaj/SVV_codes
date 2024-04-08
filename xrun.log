@@ -1,0 +1,27 @@
+xrun(64): 21.03-s001: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	21.03-s001: Started on Apr 08, 2024 at 08:11:30 IST
+xrun
+	-mess
+	-access +rwc
+	-sv
+	counter_if.sv
+	counter.sv
+	tb_top.sv
+	test.sv
+file: counter_if.sv
+	interface worklib.counter_if:sv
+		errors: 0, warnings: 0
+file: counter.sv
+	module worklib.counter:sv
+		errors: 0, warnings: 0
+file: tb_top.sv
+	module worklib.tb_top:sv
+		errors: 0, warnings: 0
+file: test.sv
+endmodule
+        |
+xmvlog: *E,NOTSTT (test.sv,25|8): expecting a statement [9(IEEE)].
+	module worklib.test:sv
+		errors: 1, warnings: 0
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	21.03-s001: Exiting on Apr 08, 2024 at 08:11:30 IST  (total: 00:00:00)

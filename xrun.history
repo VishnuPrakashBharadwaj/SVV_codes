@@ -1,0 +1,1 @@
+s1(08Apr2024:08:11:30):  xrun -mess -access +rwc -sv counter_if.sv counter.sv tb_top.sv test.sv 
