@@ -1,0 +1,17 @@
+xmvlog(64): 21.03-s001: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+include ./hdlrun.var
+|
+xmvlog: *W,DLHPTH (./hdl.var,3): hdl.var invalid path '/home/jeerur/ARBITER/./hdlrun.var' (hdl.var command ignored).
+TOOL:	xmvlog(64)	21.03-s001: Started on May 02, 2024 at 08:31:52 IST
+ncvlog
+    -mess
+    PROJECT/INTF/arbiter_if.sv
+    PROJECT/DESIGN/arbiter.sv
+
+xmvlog: *W,NCEXDEP: Executable (ncvlog) is deprecated. Use (xmvlog) instead.
+xmvlog: *E,BDLIBM: hdl.var LIB_MAP library 'worklib' is not defined.
+file: PROJECT/INTF/arbiter_if.sv
+interface arbiter_if(input bit clk);
+        |
+xmvlog: *F,NOWORK (PROJECT/INTF/arbiter_if.sv,2|8): no working library defined.
+TOOL:	xmvlog(64)	21.03-s001: Exiting on May 02, 2024 at 08:31:52 IST  (total: 00:00:00)

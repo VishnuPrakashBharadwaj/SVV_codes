@@ -1,0 +1,81 @@
+
+please follow these steps to enable coverage and then run the environment 
+
+**************STEPS TO COMPILE, ELABORATE AND SIMULATE*********************
+
+Step-1 Compiling: command
+
+ncvlog -message -sv RTL/*.sv
+
+Step-2 Elaboration: command
+
+ncelab -message -access +rcw -covdut top -coverage all work.top:module
+
+Step-3 Simulation: command 
+
+ncsim -message -covoverwrite -covtest top -covscope top work.top:module
+
+***************OR**********************************************************
+
+
+
+in a single step with irun command: as below 
+
+irun -mess -access +rwc -svseed random -covscope top -covwork cov_work -covtest ALL -coverage all -covdut top -sv RTL/*.sv
+
+
+**************************************************************************
+
+after running , you can see the coverage data recorded in the following path with this information 
+
+coverage setup:
+  workdir  :  cov_work
+  dutinst  :  top(top)
+  scope    :  top
+  testname :  ALL
+
+coverage files:
+  model(design data) :  cov_work/top/icc_2a31b0db_7963e760.ucm
+  data               :  cov_work/top/ALL/icc_2a31b0db_7963e760.ucd
+
+from command line RUN : 
+
+iccr -load_test ./cov_work/<dutinst>/<testname> -gui
+
+
+in our case the command is as below 
+
+iccr -load_test ./cov_work/top/ALL -gui
+
+
+
+u can start to analyse the report for this tool that gets invoked
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FOR REFERENCE:1586085257
